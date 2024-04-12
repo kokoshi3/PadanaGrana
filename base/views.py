@@ -6,14 +6,17 @@ from django.shortcuts import HttpResponse
 def home(request):
     return HttpResponse("Home page do zrobienia")
 
-def dostawa(request):
-    return HttpResponse("strona dostawy do zrobienia")
+def zamow(request):
+    return HttpResponse("strona zamawiania do zrobienia")
 
 def login(request):
     return render(request,'login.html')
 
-def panel(request):
-    return HttpResponse("Panel pracownika zamowien do zrobienia")
-# po stworzeniu htmla, podmienic ^ z dolem
-#   return render(request,'panel.html')
+def panelPracownika(request):
+    return render(request,'panelPracownika.html')
+
+def panelKlienta(request):
+    return render(request,'panelKlienta.html')
+
+
 
