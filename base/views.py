@@ -4,7 +4,7 @@ from django.shortcuts import HttpResponse
 # Create your views here.
 
 def home(request):
-    return HttpResponse("Home page do zrobienia")
+    return render(request,'homepage.html')
 
 def dostawa(request):
     return HttpResponse("strona dostawy do zrobienia")
