@@ -13,4 +13,7 @@ def login(request):
     return render(request,'login.html')
 
 def panel(request):
-    return HttpResponse("Panel zamowien do zrobienia")
+    return HttpResponse("Panel pracownika zamowien do zrobienia")
+# po stworzeniu htmla, podmienic ^ z dolem
+#   return render(request,'panel.html')
+
