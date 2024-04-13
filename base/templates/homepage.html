@@ -8,7 +8,8 @@
 <title>Light Theme</title>
 <link href="{% static 'styles/singlePageTemplate.css' %}" rel="stylesheet" type="text/css">
 <script>var __adobewebfontsappname__="dreamweaver"</script>
-<script src="http://use.edgefonts.net/source-sans-pro:n2:default.js" type="text/javascript"></script>
+<script src="{% static 'script.js' %}"></script>
+<!--<script src="http://use.edgefonts.net/source-sans-pro:n2:default.js" type="text/javascript"></script>-->
 </head>
 <body>
 <div class="container2">
@@ -18,8 +19,8 @@
     <div class="menu">
       <a href=""><button>STRONA GŁÓWNA</button></a>
       <a href=""><button>MENU</button></a>
-      <a href=""><button>O NAS</button></a>
-      <a href=""><button>KONTAKT</button></a>
+      <a href="#onas"><button>O NAS</button></a>
+      <a href="#kontakt"><button>KONTAKT</button></a>
       <a href="/login"><button>ZALOGUJ SIĘ</button></a>
     </div>
     <div class="section1">
@@ -32,7 +33,7 @@
     </div>
 </div>
 <div class="container3">
-    <div class="infobar">
+    <div class="infobar" id="onas">
         <div class="info">
             <div class="infographic">
                 <img src=/static/images/cheese.png alt="">
@@ -78,7 +79,7 @@
         </div>
     </div>
 </div>
-<div class="footer">
+<div class="footer" id="kontakt">
     <div class="logobox2">
         <img src=/static/images/logopadanagrana_white.png alt="">
     </div>
