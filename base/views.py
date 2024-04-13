@@ -7,7 +7,10 @@ def home(request):
     return render(request,'homepage.html')
 
 def zamow(request):
-    return HttpResponse("strona zamawiania do zrobienia")
+    return render(request,'zamow.html')
+
+def rezerwacja(request):
+    return render(request,'rezerwacja.html')
 
 def login(request):
     return render(request,'login.html')
