@@ -12,11 +12,16 @@ def zamow(request):
 def login(request):
     return render(request,'login.html')
 
+def rejestracja(request):
+    return render(request,'rejestracja.html')
+
 def panelPracownika(request):
     return render(request,'panelPracownika.html')
 
 def panelKlienta(request):
     return render(request,'panelKlienta.html')
+
+
 
 
 
