@@ -9,23 +9,27 @@
 <link href="{% static 'styles/singlePageTemplate.css' %}" rel="stylesheet" type="text/css">
 <script>var __adobewebfontsappname__="dreamweaver"</script>
 <script src="http://use.edgefonts.net/source-sans-pro:n2:default.js" type="text/javascript"></script>
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
 <body>
-<div class="container">
-	<div class="logobox">
-		<a href="/"><img src=/static/images/logopadanagrana_white.png alt=""></a>
-	</div>
-	<div class="loginBox">
-	<div class="inputboxes">
-		<div class="logger">
-		<input class="login" type="text" placeholder="Nazwa użytkownika">
-		<input class="password" type="password" placeholder="Hasło">
-		<button class="submit-button">Log In</button>
-			<div class="signUp">
-				<a href="/rejestracja">Zarejestruj się!</a>
-			</div>
-		</div>
+<div class="login-container">
+<div class="logobox2">
+	<a href="#"><img src="{% static 'images/logopadanagrana_white.png' %}" alt=""></a>
 </div>
+<div class="wrapper">
+	<form action="">
+		<h1>Panel pracownika</h1>
+		<div class="input-box">
+			<input type="text" placeholder="Nazwa użytkownika" required>
+			<i class='bx bxs-user'></i>
+		</div>
+		<div class="input-box">
+			<input type="password" placeholder="Hasło" required>
+			<i class='bx bxs-lock'></i>
+		</div>
+		<button type="submit" class="btn">Zaloguj</button>
+	</form>
 </div>
 </div>
 </body>
