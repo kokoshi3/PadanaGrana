@@ -43,6 +43,45 @@ body {
 	align-items: center;
 }
 
+.container3{
+	height: 100vh;
+	background-color: #fff;
+}
+
+.infobar {
+	font-family: "Montserrat", sans-serif;
+	height: 30vh;
+	background-color: #f4f4f4;
+	padding-left: 8rem;
+	padding-right: 8rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.info {
+	width: 30%;
+}
+
+.infobar {
+	font-family: "Oswald", sans-serif;
+	font-weight: normal;
+	font-size: 1rem;
+}
+
+.info {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 15px;
+}
+
+.infotext h3{
+	margin-bottom: -10px;
+}
+
+
 .container-homepage span {
 	color: white;
 	font-size: 3rem;
@@ -55,6 +94,11 @@ body {
 	top: -8rem;
 	width: 300px;
 	height: 120px;
+}
+
+.logobox2 img {
+	width: 212px;
+	height: 85px;
 }
 
 .loginBox {
@@ -70,6 +114,7 @@ body {
 
 .logger {
 	width: 400px;
+
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -216,3 +261,97 @@ input {
 	transform: scale(105%);
 	text-shadow: 1px 1px 10px #000;
 }
+
+.infographic img {
+	width: 65px;
+	height: 65px;
+}
+
+.section2 {
+	height: 70vh;
+}
+
+.about-us {
+	display: flex;
+	flex-direction: row;
+	height: inherit;
+}
+
+.about-left {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	width: 50%;
+	height: inherit;
+	padding-left: 8rem;
+
+}
+
+.about-left h3 {
+	font-family: "Oswald", sans-serif;
+	font-size: 3rem;
+	text-decoration: underline;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.about-left h4 {
+	font-family: "Montserrat", sans-serif;
+	font-weight: bold;
+	font-size: 1.2rem;
+	width: 80%;
+}
+
+.about-left span {
+	font-family: "Montserrat", sans-serif;
+	font-weight: normal;
+	font-size: 1rem;
+	width: 70%;
+}
+
+.about-right {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+	padding-right: 8rem;
+}
+
+.about-right img {
+	width: 100%;
+	/*box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.1);*/
+}
+
+.footer {
+	height: 20vh;
+	padding-left: 8rem;
+	padding-right: 8rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	background-color: #392B2B;
+	gap: 30px;
+}
+
+.description {
+
+}
+
+.description p {
+	font-family: "Montserrat", sans-serif;
+	font-weight: bold;
+	font-size: 1.2rem;
+	color: white;
+}
+
+.description span {
+	font-family: "Montserrat", sans-serif;
+	font-weight: normal;
+	font-size: 0.8rem;
+	color: white;
+}
+
+/*<a href="https://www.flaticon.com/free-icons/cheese" title="cheese icons">Cheese icons created by Freepik - Flaticon</a>*/
+/*<a href="https://www.flaticon.com/free-icons/chef" title="chef icons">Chef icons created by Those Icons - Flaticon</a>*/
+/*<a href="https://www.flaticon.com/free-icons/wine" title="wine icons">Wine icons created by Freepik - Flaticon</a>*/
