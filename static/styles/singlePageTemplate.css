@@ -99,10 +99,15 @@ body {
 	height: 120px;
 }
 
-.logobox2 img {
+.logobox3 img {
 	position: fixed;
 	top: 5%;
 	left: 44%;
+	width: 212px;
+	height: 85px;
+}
+
+.logobox2 img {
 	width: 212px;
 	height: 85px;
 }
