@@ -18,14 +18,15 @@
 	<a href="/"><img src="{% static 'images/logopadanagrana_white.png' %}" alt=""></a>
 </div>
 <div class="wrapper">
-	<form action="">
+	<form method="post" action="{% url 'login' %}">
+        {% csrf_token %}
 		<h1>Panel pracownika</h1>
 		<div class="input-box">
-			<input type="text" placeholder="Nazwa użytkownika" required>
+			<input type="text" name="username" placeholder="Nazwa użytkownika" required>
 			<i class='bx bxs-user'></i>
 		</div>
 		<div class="input-box">
-			<input type="password" placeholder="Hasło" required>
+			<input type="password" name="password" placeholder="Hasło" required>
 			<i class='bx bxs-lock'></i>
 		</div>
 		<button type="submit" class="btn">Zaloguj</button>
