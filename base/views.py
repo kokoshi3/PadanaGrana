@@ -50,5 +50,4 @@ def panelAdmina(request):
     return render(request, 'panelAdmina.html')
 
 
-def panelKlienta(request):
-    return render(request, 'panelKlienta.html')
+
