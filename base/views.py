@@ -1,8 +1,9 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import HttpResponse
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
+
 
 
 # Create your views here.
@@ -36,8 +37,10 @@ def login_view(request):
     # return render(request,'login.html')
 
 
-def rejestracja(request):
-    return render(request, 'rejestracja.html')
+@login_required
+def user_logout(request):
+    logout(request)
+    return redirect('/')
 
 
 @login_required

@@ -1,1 +1,17 @@
 Panel pracownika zamowien do zrobienia
+{% load static %}
+<html>
+<head></head>
+<script>
+    window.history.pushState(null, null, window.location.href);
+    window.onpopstate = function() {
+    window.history.go(1);
+    };
+</script>
+<body>
+<form action = "{% url 'logout' %}" method="post">
+    {%  csrf_token %}
+    <button type="submit">Wyloguj się</button>
+</form>
+</body>
+</html>
