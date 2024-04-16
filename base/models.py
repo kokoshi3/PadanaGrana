@@ -24,7 +24,7 @@ class Order(models.Model):
         ('zakonczony', 'Zakonczony')
     ]
     created_at = models.DateTimeField(auto_now_add=True)
-    status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='otrzymany')
+    status = models.CharField(max_length=15, choices=STATUS_CHOICES, default='otrzymany')
     total_price = models.DecimalField(max_digits=8, decimal_places=2, blank=True, null=True)
 
     def __str__(self):
