@@ -1,17 +1,78 @@
-Panel pracownika zamowien do zrobienia
+<!doctype html>
 {% load static %}
-<html>
-<head></head>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Panel Pracownika</title>
+<link href="{% static 'styles/singlePageTemplate.css' %}" rel="stylesheet" type="text/css">
+<script>var __adobewebfontsappname__="dreamweaver"</script>
+<script src="http://use.edgefonts.net/source-sans-pro:n2:default.js" type="text/javascript"></script>
+<script src="{% static 'script.js' %}"></script>
 <script>
     window.history.pushState(null, null, window.location.href);
     window.onpopstate = function() {
     window.history.go(1);
     };
 </script>
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
 <body>
-<form action = "{% url 'logout' %}" method="post">
-    {%  csrf_token %}
-    <button type="submit">Wyloguj się</button>
-</form>
+<div class="employee-panel">
+  <div class="navbar-panel">
+    <a href="#"><img src="{% static 'images/logopadanagrana_white.png' %}" alt=""></a>
+  </div>
+    <div class="main-panel">
+        <a>Panel pracownika</a>
+        <div class="functional-panel">
+            <div class="left-panel">
+                <div class="functional-buttons">
+                    <button class="func" data-window="general-info"><i class='bx bx-info-circle' ></i> Ogólne informacje</button>
+                    <button class="func" data-window="orders-online"><i class='bx bx-coin'></i> Zamówienia - online</button>
+                    <button class="func" data-window="reservations-calendar"><i class='bx bx-calendar' ></i> Kalendarz rezerwacji</button>
+                    <button class="func" data-window="employees"> <i class='bx bx-group'></i> Pracownicy</button>
+                </div>
+                <div class="logout-button">
+                    <form action = "{% url 'logout' %}" method="post">
+                    {%  csrf_token %}
+                    <button class="func"><i class='bx bx-log-out-circle' ></i> Wyloguj</button>
+                    </form>
+                </div>
+            </div>
+            <div class="right-panel">
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<template id="general-info-template">
+    <div class="info-panel">
+        <h2>Ogólne informacje</h2>
+        <p>Tutaj znajdą się ogólne informacje o restauracji, statystyki itp.</p>
+    </div>
+</template>
+
+<template id="orders-online-template">
+    <div class="info-panel">
+        <h2>Zamówienia online</h2>
+        <p>Tutaj możesz zarządzać zamówieniami złożonymi online.</p>
+    </div>
+</template>
+
+<template id="reservations-calendar-template">
+    <div class="info-panel">
+        <h2>Kalendarz rezerwacji</h2>
+        <p>Tutaj można przeglądać i zarządzać kalendarzem rezerwacji.</p>
+    </div>
+</template>
+
+<template id="employees-template">
+    <div class="info-panel">
+        <h2>Pracownicy</h2>
+        <p>Informacje o pracownikach, harmonogramy, itp.</p>
+    </div>
+</template>
 </body>
 </html>

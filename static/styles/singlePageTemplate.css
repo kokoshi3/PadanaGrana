@@ -2,415 +2,551 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Mooli&family=Oswald:wght@200..700&family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mooli&family=Oswald:wght@200..700&family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mooli&family=Oswald:wght@200..700&family=Poppins&display=swap');
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
 /* Body */
 html{
-	scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
-	background-color: #f2f2f2;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	font-style: normal;
-	font-weight: 200;
+    font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+    background-color: #f2f2f2;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    font-style: normal;
+    font-weight: 200;
 }
 /* Container */
 .container {
-	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	height: 100vh;
-	background-image: url(/static/images/bckgr.png);
-	background-size: cover;
-	background-position: center;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100vh;
+    background-image: url(/static/images/bckgr.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .container2 {
-	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	height: 100vh;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/static/images/homepagepizza.png);
-	background-size: cover;
-	background-position: center;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/static/images/homepagepizza.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .container3{
-	height: 100vh;
-	background-color: #fff;
+    height: 100vh;
+    background-color: #fff;
 }
 
 .infobar {
-	font-family: "Montserrat", sans-serif;
-	height: 30vh;
-	background-color: #f4f4f4;
-	padding-left: 8rem;
-	padding-right: 8rem;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	align-items: center;
+    font-family: "Montserrat", sans-serif;
+    height: 30vh;
+    background-color: #f4f4f4;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .info {
-	width: 30%;
+    width: 30%;
 }
 
 .infobar {
-	font-family: "Oswald", sans-serif;
-	font-weight: normal;
-	font-size: 1rem;
+    font-family: "Oswald", sans-serif;
+    font-weight: normal;
+    font-size: 1rem;
 }
 
 .info {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	gap: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
 }
 
 .infotext h3{
-	margin-bottom: -10px;
+    margin-bottom: -10px;
 }
 
 
 .container-homepage span {
-	color: white;
-	font-size: 3rem;
-	position: relative;
-	top: -10rem;
+    color: white;
+    font-size: 3rem;
+    position: relative;
+    top: -10rem;
 }
 
 .logobox img{
-	position: relative;
-	top: -8rem;
-	width: 300px;
-	height: 120px;
+    position: relative;
+    top: -8rem;
+    width: 300px;
+    height: 120px;
 }
 
 .logobox3 img {
-	position: fixed;
-	top: 5%;
-	left: 44%;
-	width: 212px;
-	height: 85px;
+    position: fixed;
+    top: 5%;
+    left: 44%;
+    width: 212px;
+    height: 85px;
 }
 
 .logobox2 img {
-	width: 212px;
-	height: 85px;
+    width: 212px;
+    height: 85px;
 }
 
 .home-buttons button{
-	width: 150px;
-	height: 150px;
-	border-radius: 15px;
-	background-color: rgb(255,255,255);
-	box-shadow: rgba(0,0,0,0);
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    background-color: rgb(255,255,255);
+    box-shadow: rgba(0,0,0,0);
 }
 
 .home-buttons button:hover {
-	cursor: pointer;
+    cursor: pointer;
 }
 
 .navbar {
-	height: 150px;
-	padding-left: 100px;
-	padding-right: 100px;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+    height: 150px;
+    padding-left: 100px;
+    padding-right: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .navbar img {
-	width: 201px;
-	height: 81px;
+    width: 201px;
+    height: 81px;
 }
 
 .menu {
-	display: flex;
-	gap: 20px;
+    display: flex;
+    gap: 20px;
 }
 
 .menu button {
-	font-family: "Barlow", sans-serif;
-	color: #fff;
-	font-size: 1.2rem;
-	background-color: transparent;
-	outline: none;
-	border: none;
-	box-shadow: transparent;
-	transition: all .2s ease-in-out;
-	text-shadow: 1px 1px 2px #000;
+    font-family: "Barlow", sans-serif;
+    color: #fff;
+    font-size: 1.2rem;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    box-shadow: transparent;
+    transition: all .2s ease-in-out;
+    text-shadow: 1px 1px 2px #000;
 }
 
 .menu button:hover {
-	cursor: pointer;
-	transform: scale(105%);
-	color: #f7d847;
+    cursor: pointer;
+    transform: scale(105%);
+    color: #f7d847;
 }
 
 .section1 {
-	height: 100vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .section1 h1 {
-	margin-top: -200px;
-	font-family: "Montserrat", sans-serif;
-	font-size: 6rem;
-	color: #fff;
-	text-shadow: 1px 1px 10px #000;
+    margin-top: -200px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 6rem;
+    color: #fff;
+    text-shadow: 1px 1px 10px #000;
 }
 
 .section1 h2 {
-	margin-top: -50px;
-	font-family: "Montserrat", sans-serif;
-	font-weight: normal;
-	font-size: 1rem;
-	letter-spacing: .5px;
-	color: #fff;
-	text-shadow: 1px 1px 10px #000;
+    margin-top: -50px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: normal;
+    font-size: 1rem;
+    letter-spacing: .5px;
+    color: #fff;
+    text-shadow: 1px 1px 10px #000;
 }
 
 .homepage-buttons button{
-	font-family: "Montserrat", sans-serif;
-	font-size: 0.8rem;
-	font-weight: bold;
-	color: white;
-	margin-top: 50px;
-	margin-left: 10px;
-	margin-right: 10px;
-	width: 200px;
-	background-color: transparent;
-	outline: none;
-	box-shadow: none;
-	border: 4px solid white;
-	padding-right: 20px;
-	padding-left: 20px;
-	padding-top: 15px;
-	padding-bottom: 15px;
-	transition: all .2s ease-in-out;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white;
+    margin-top: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 200px;
+    background-color: transparent;
+    outline: none;
+    box-shadow: none;
+    border: 4px solid white;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    transition: all .2s ease-in-out;
 
 }
 
 .homepage-buttons button:hover {
-	cursor: pointer;
-	transform: scale(105%);
-	text-shadow: 1px 1px 10px #000;
+    cursor: pointer;
+    transform: scale(105%);
+    text-shadow: 1px 1px 10px #000;
 }
 
 .infographic img {
-	width: 65px;
-	height: 65px;
+    width: 65px;
+    height: 65px;
 }
 
 .section2 {
-	height: 70vh;
+    height: 70vh;
 }
 
 .about-us {
-	display: flex;
-	flex-direction: row;
-	height: inherit;
+    display: flex;
+    flex-direction: row;
+    height: inherit;
 }
 
 .about-left {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: flex-start;
-	width: 50%;
-	height: inherit;
-	padding-left: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+    height: inherit;
+    padding-left: 8rem;
 
 }
 
 .about-left h3 {
-	font-family: "Oswald", sans-serif;
-	font-size: 3rem;
-	text-decoration: underline;
-	margin-top: 0px;
-	margin-bottom: 0px;
+    font-family: "Oswald", sans-serif;
+    font-size: 3rem;
+    text-decoration: underline;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .about-left h4 {
-	font-family: "Montserrat", sans-serif;
-	font-weight: bold;
-	font-size: 1.2rem;
-	width: 80%;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    width: 80%;
 }
 
 .about-left span {
-	font-family: "Montserrat", sans-serif;
-	font-weight: normal;
-	font-size: 1rem;
-	width: 70%;
+    font-family: "Montserrat", sans-serif;
+    font-weight: normal;
+    font-size: 1rem;
+    width: 70%;
 }
 
 .about-right {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 50%;
-	padding-right: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding-right: 8rem;
 }
 
 .about-right img {
-	width: 100%;
-	/*box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.1);*/
+    width: 100%;
+    /*box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.1);*/
 }
 
 .footer {
-	height: 30vh;
-	padding-left: 8rem;
-	padding-right: 8rem;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-between;
-	background-color: #392B2B;
-	gap: 50px;
+    height: 30vh;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #392B2B;
+    gap: 50px;
 }
 
 .description {
-	width: 35%;
+    width: 35%;
 }
 
 .description p {
-	font-family: "Montserrat", sans-serif;
-	font-weight: bold;
-	font-size: 1.2rem;
-	color: white;
-	margin-bottom: 0px;
-	margin-top: 0px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 0px;
+    margin-top: 0px;
 }
 
 .description span {
-	font-family: "Montserrat", sans-serif;
-	font-weight: normal;
-	font-size: 0.8rem;
-	color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: normal;
+    font-size: 0.8rem;
+    color: white;
 }
 
 .contact {
-	display: flex;
-	flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .contactline {
-	font-family: "Montserrat", sans-serif;
-	font-weight: normal;
-	display: flex;
-	flex-direction: row;
-	color: white;
-	gap: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: normal;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    gap: 10px;
 }
 
 .contactline h4 {
-	margin-top: 5px;
-	margin-bottom: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .contactline p {
-	margin-top: 5px;
-	margin-bottom: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .login-container {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: "Poppins", sans-serif;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
-	background: url(/static/images/bckgr.png);
-	background-size: cover;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(/static/images/bckgr.png);
+    background-size: cover;
 }
 
 .wrapper {
-	width: 420px;
-	background-color: transparent;
-	border: 2px solid rgba(255, 255, 255, .2);
-	color: #fff;
-	border-radius: 10px;
-	padding: 30px 40px;
-	backdrop-filter: blur(20px);
-	box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    width: 420px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
 }
 
 .wrapper h1 {
-	font-size: 24px;
-	text-align: center;
+    font-size: 24px;
+    text-align: center;
 }
 
 .wrapper .input-box {
-	position: relative;
-	width: 94%;
-	height: 50px;
-	margin: 30px 0;
+    position: relative;
+    width: 94%;
+    height: 50px;
+    margin: 30px 0;
 }
 
 .input-box input {
-	width: 100%;
-	height: 100%;
-	background: transparent;
-	border: none;
-	outline: none;
-	border: 2px solid rgba(255, 255, 255, .2);
-	border-radius: 40px;
-	font-size: 16px;
-	color: #fff;
-	padding: 0 0 0 20px;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 0 0 0 20px;
 }
 
 .input-box input::placeholder {
-	color: #fff;
+    color: #fff;
 }
 
 .input-box i {
-	position: absolute;
-	right: 5px;
-	top: 50%;
-	transform: translateY(-50%);
-	font-size: 20px;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
 }
 
 .wrapper .btn {
-	width: 100%;
-	height: 45px;
-	background: #fff;
-	border: none;
-	outline: none;
-	border-radius: 40px;
-	box-shadow: 0 0 10px rgba(0,0,0,1);
-	cursor: pointer;
-	font-size: 16px;
-	color: #333;
-	font-weight: 600;
-	transition: all .2s ease-in-out;
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    transition: all .2s ease-in-out;
 }
 
 .wrapper .btn:hover{
-	transform: scale(105%);
-	background-color: #f4f4f4;
+    transform: scale(105%);
+    background-color: #f4f4f4;
+}
+
+.employee-panel {
+    height: 100vh;
+    background-color: #121212;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-panel img {
+    width: 75px;
+    height: 31px;
+	position: fixed;
+    top: 1.5%;
+    left: 46%;
+}
+
+.main-panel {
+    height: 80vh;
+    width: 80%;
+    background-color: #1e1e1e;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+.main-panel a {
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.functional-panel {
+    height: 80%;
+    width: 95%;
+    display: flex;
+}
+
+.left-panel {
+    height: 100%;
+    width: 20%;
+    border-right: 1px solid #373737;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 15px;
+}
+
+.functional-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.logout-button {
+    display: flex;
+    flex-direction: column;
+}
+
+.right-panel {
+    height: 100%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.func {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(247,216,71,0.08);
+    color: #fff;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    text-align: left;
+}
+
+.func i{
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.func.active {
+    border-bottom: 1px solid #f7d847;
+    box-shadow: 0 4px 2px -3px #f7d847;
+}
+
+.func.active, .func:hover {
+    border-bottom: 1px solid #f7d847;
+    box-shadow: 0 4px 2px -3px #f7d847;
+}
+
+.info-panel {
+    width: 90%;
+    height: 90%;
+    background-color: #393939;
+    border-radius: 15px;
+    padding: 15px 20px 15px 20px;
+}
+
+.info-panel h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    color: #fff;
+}
+
+.info-panel p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #fff;
+}
+
+.right-panel-content {
+  animation: fadeIn 0.5s ease-in-out;
 }
 
 /*<a href="https://www.flaticon.com/free-icons/cheese" title="cheese icons">Cheese icons created by Freepik - Flaticon</a>*/
