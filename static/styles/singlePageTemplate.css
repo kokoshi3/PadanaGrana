@@ -545,6 +545,14 @@ body {
     color: #fff;
 }
 
+.calendar-frame {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .right-panel-content {
   animation: fadeIn 0.5s ease-in-out;
 }
