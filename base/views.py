@@ -4,6 +4,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import HttpResponse
 from django.http import HttpResponse, HttpResponseRedirect
 
+from base.models import Product
 
 
 # Create your views here.
@@ -52,5 +53,8 @@ def panelPracownika(request):
 def panelAdmina(request):
     return render(request, 'panelAdmina.html')
 
-
+def product_list(request):
+    products = Product.objects.all()
+    print(products)
+    return render(request, 'product_list.html', {'products': products})
 

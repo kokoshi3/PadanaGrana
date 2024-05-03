@@ -573,7 +573,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 1px red solid;
+    border-right: 1px solid #ccc;
 }
 
 .order-buttons {
@@ -626,11 +626,11 @@ body {
 
 .food-choose {
     width: 80%;
-    max-height: 80vh; /* Przykładowa maksymalna wysokość */
-    overflow: auto; /* Dodanie przewijania w razie potrzeby */
+    max-height: 80vh;
+    overflow: auto;
     padding-left: 5%;
     padding-right: 5%;
-    margin: auto; /* Wycentrowanie tabeli w kontenerze */
+    margin: auto;
 }
 
 .food-table {
