@@ -557,6 +557,212 @@ body {
   animation: fadeIn 0.5s ease-in-out;
 }
 
+.container3 {
+    height: 100vh;
+    width: 100%;
+    background-color: #1e1e1e;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.food-sort{
+    height: inherit;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px red solid;
+}
+
+.order-buttons {
+    padding-top: 20px;
+}
+
+.order-buttons button {
+    width: 100%;
+    height: 50px;
+    padding-left: 50px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(247,216,71,0.08);
+    color: #fff;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    text-align: left;
+}
+
+.basket-button {
+    padding-bottom: 20px;
+}
+
+.basket-button button {
+    width: 100%;
+    height: 50px;
+    padding-left: 50px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(247,216,71,0.08);
+    color: #fff;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    text-align: left;
+}
+
+.basket-button button:hover {
+    border-bottom: 1px solid #f7d847;
+    box-shadow: 0 4px 2px -3px #f7d847;
+}
+
+.order-buttons button:hover {
+    border-bottom: 1px solid #f7d847;
+    box-shadow: 0 4px 2px -3px #f7d847;
+}
+
+.food-choose {
+    width: 80%;
+    max-height: 80vh; /* Przykładowa maksymalna wysokość */
+    overflow: auto; /* Dodanie przewijania w razie potrzeby */
+    padding-left: 5%;
+    padding-right: 5%;
+    margin: auto; /* Wycentrowanie tabeli w kontenerze */
+}
+
+.food-table {
+    color: #fff;
+    border-collapse: collapse;
+}
+
+.food-choose table{
+    border: 1px solid white;
+    background-color: #fff;
+    color: rgb(33,37,41);
+    display: table;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28.8px;
+    margin-bottom: 16px;
+    text-align: left;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.thead-primary {
+    height: 50px;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #ccc;
+    background-image: none;
+    background-origin: padding-box;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-repeat: repeat;
+    background-size: auto;
+    border-bottom-color: rgb(128,128,128);
+    border-left-color: rgb(128,128,128);
+    border-top-color: rgb(128,128,128);
+    border-right-color: rgb(128,128,128);
+    box-sizing: border-box;
+    color: rgb(33,37,41);
+    border-collapse: collapse;
+    display: table-header-group;
+    line-height: 28.8px;
+    text-align: left;
+    text-indent: 0px;
+    text-size-adjust: 100%;
+    unicode-bidi: isolate;
+    vertical-align: middle;
+}
+
+tbody {
+    border-bottom-color: rgb(128,128,128);
+    border-top-color: rgb(128,128,128);
+    border-left-color: rgb(128,128,128);
+    border-right-color: rgb(128,128,128);
+    border-collapse: collapse;
+    box-sizing: border-box;
+    color: rgb(33,37,41);
+    display: table-row-group;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28.8px;
+    text-align: left;
+    text-indent: 0px;
+    text-size-adjust: 100%;
+    unicode-bidi: isolate;
+    vertical-align: middle;
+}
+
+.alert {
+    border-bottom-color: rgba(0,0,0,0);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-collapse: collapse;
+    border-image-outset: 0;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+    border-left-color: rgba(0,0,0,0);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: rgba(0,0,0,0);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: rgba(0,0,0,0);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-right-style: solid;
+    border-right-width: 1px;
+    box-sizing: border-box;
+    color: rgb(33,37,41);
+    display: table-row;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    line-height: 28.8px;
+    margin-bottom: 10px;
+    padding-bottom: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 12px;
+    position: relative;
+    text-align: left;
+    text-indent: 0px;
+    text-size-adjust: 100%;
+    unicode-bidi: isolate;
+    vertical-align: middle;
+}
+
+.food-image {
+background-position-x: 50%;
+background-position-y: 50%;
+background-repeat: no-repeat;
+background-size: cover;
+border-collapse: collapse;
+box-sizing: border-box;
+color: rgb(33, 37, 41);
+display: block;
+font-family: Poppins, Arial, sans-serif;
+font-size: 14px;
+font-weight: 400;
+height: 80px;
+line-height: 25.2px;
+text-align: left;
+text-indent: 0px;
+text-size-adjust: 100%;
+unicode-bidi: isolate;
+width: 100px;
+}
+
 /*<a href="https://www.flaticon.com/free-icons/cheese" title="cheese icons">Cheese icons created by Freepik - Flaticon</a>*/
 /*<a href="https://www.flaticon.com/free-icons/chef" title="chef icons">Chef icons created by Those Icons - Flaticon</a>*/
 /*<a href="https://www.flaticon.com/free-icons/wine" title="wine icons">Wine icons created by Freepik - Flaticon</a>*/
