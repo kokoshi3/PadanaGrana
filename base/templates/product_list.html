@@ -14,18 +14,19 @@
 <!--<script src="http://use.edgefonts.net/source-sans-pro:n2:default.js" type="text/javascript"></script>-->
 </head>
 <body>
-<div class="container3">
+<div class="container4">
     
     <div class="food-sort">
         <div class="order-buttons">
-            <button>Wszystko</button>
-            <button>Dania główne</button>
-            <button>Desery</button>
-            <button>Napoje</button>            
+            <button onclick="filterTable('Wszystko')" data-active="true">Wszystko</button>
+            <button onclick="filterTable('dania glowne')" data-active="false">Dania główne</button>
+            <button onclick="filterTable('desery')" data-active="false">Desery</button>
+            <button onclick="filterTable('napoje')" data-active="false">Napoje</button>            
         </div>
         
         <div class="basket-button">
             <button>Koszyk</button>
+            <a href="/"><button>Powrót</button></a>
         </div>
     </div>
         <div class="food-choose">
@@ -41,11 +42,17 @@
             </thead>
             <tbody>
                 {% for product in products %}
-                <tr>
-                    <td>img</td>
+                <tr data-category="{{ product.category.name }}">
+                    <td>
+                        {% if product.image %}
+                            <img src="{{ product.image.url }}" alt="{{ product.name }}" style="width: 50px; height: 50px;">
+                        {% else %}
+                            <img src="{% static 'images/default.png' %}" alt="Default Image" style="width: 50px; height: 50px;">
+                        {% endif %}
+                    </td>
                     <td>{{ product.name }}</td>
                     <td>{{ product.description }}</td>
-                    <td>{{ product.price }}</td>
+                    <td>{{ product.price }} zł</td>
                     <td><button>Zamów</button></td>
                 </tr>
                 {% endfor %}

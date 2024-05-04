@@ -42,3 +42,22 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 });
+
+function filterTable(category) {
+    const rows = document.querySelectorAll('.food-table tbody tr');
+    if (category === 'Wszystko') {
+        // Pokaż wszystkie wiersze
+        rows.forEach(row => {
+            row.style.display = '';
+        });
+    } else {
+        // Filtruj według określonej kategorii
+        rows.forEach(row => {
+            if (row.getAttribute('data-category') === category) {
+                row.style.display = '';
+            } else {
+                row.style.display = 'none';
+            }
+        });
+    }
+}
