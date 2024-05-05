@@ -632,7 +632,7 @@ body {
     overflow-y: auto;
     border-collapse: separate;
     box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-    border-radius: 8px; /* Zastosowanie zaokrąglenia dla całej tabeli */
+    border-radius: 8px;
     border-spacing: 0;
     background-color: #ffffff;
     font-family: Montserrat, sans-serif;
@@ -642,8 +642,8 @@ body {
 
 .food-choose {
     width: 80%;
-    max-height: 90vh; /* Maksymalna wysokość kontenera */
-    overflow: hidden; /* Ukrywa przewijanie na tym poziomie */
+    max-height: 90vh;
+    overflow: hidden;
     margin: auto;
     padding: 20px;
     box-sizing: border-box;
@@ -654,20 +654,20 @@ body {
 
 tbody {
     display: block;
-    max-height: 80vh; /* Ograniczenie wysokości */
-    overflow-y: auto; /* Włączenie przewijania tylko wertykalnie */
-    border-radius: 0 0 8px 8px; /* Zaokrąglenie tylko dolnych rogów */
+    max-height: 80vh;
+    overflow-y: auto;
+    border-radius: 0 0 8px 8px;
 }
 
 thead, tbody tr {
     display: table;
     width: 100%;
-    table-layout: fixed; /* Utrzymuje kolumny tabeli wyrównane */
+    table-layout: fixed;
 }
 
 thead {
-    width: calc(100% - 1em); /* Ajust to compensate for scrollbar */
-    border-radius: 8px 8px 0 0; /* Zaokrąglenie tylko górnych rogów */
+    width: calc(100% - 1em);
+    border-radius: 8px 8px 0 0;
 }
 
 .food-table th, .food-table td {
@@ -687,7 +687,7 @@ thead {
 }
 
 .food-table tr[style*="display: none"] {
-    display: none !important; /* Zapewnienie, że wiersze pozostają ukryte */
+    display: none !important;
 }
 
 .food-table tr:last-child td {
@@ -696,64 +696,155 @@ thead {
 
 .food-table img {
     display: block;
-    margin: auto; /* Centrowanie w poziomie */
-    vertical-align: middle; /* Centrowanie w pionie */
-    width: 50px; /* Dostosuj szerokość */
-    height: 50px; /* Dostosuj wysokość */
-    border-radius: 50%; /* Opcjonalnie, jeśli chcesz zaokrąglone zdjęcia */
-    object-fit: cover; /* Zapewnia, że obrazki są odpowiednio przycięte */
+    margin: auto;
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .food-table button {
-    padding: 8px 16px; /* Padding dookoła tekstu */
-    background-color: #4CAF50; /* Zielony kolor tła */
-    color: white; /* Biały tekst */
-    border: none; /* Brak obramowania */
-    border-radius: 4px; /* Zaokrąglone rogi */
-    cursor: pointer; /* Kursor wskazujący na możliwość kliknięcia */
-    transition: background-color 0.3s ease; /* Animacja zmiany koloru */
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .food-table button:hover {
-    background-color: #45a049; /* Ciemniejszy zielony kolor po najechaniu */
+    background-color: #45a049;
 }
 
 .food-table th:nth-child(1), .food-table td:nth-child(1) {
-    width: 10%; /* Szerokość dla kolumny z obrazkami */
+    width: 10%;
 }
 
 .food-table th:nth-child(2), .food-table td:nth-child(2),
 .food-table th:nth-child(3), .food-table td:nth-child(3) {
-    width: 30%; /* Szerokość dla kolumn z daniami i opisami */
+    width: 30%;
 }
 
 .food-table th:nth-child(4), .food-table td:nth-child(4),
 .food-table th:nth-child(5), .food-table td:nth-child(5) {
-    width: 15%; /* Szerokość dla kolumny z ceną i przyciskami */
+    width: 15%;
 }
 
 .food-table thead tr:first-child th:first-child {
     border-top-left-radius: 8px;
 }
 
-/* Stylizacja pasków przewijania dla wszystkich elementów */
+.container5 {
+    height: 100vh;
+    width: 100%;
+    background-color: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Montserrat, sans-serif;
+}
+
+.container5 h1{
+    color: #fff;
+}
+
+.cart-table {
+    width: 100%;
+    min-height: 90vh;
+    max-height: 500px;
+    overflow-y: auto;
+    border-collapse: separate;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    border-spacing: 0;
+    background-color: #ffffff;
+    font-family: Montserrat, sans-serif;
+    color: #1e1e1e;
+    font-weight: 400;
+}
+
 ::-webkit-scrollbar {
-    width: 10px; /* Szerokość paska przewijania */
+    width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Kolor tła ścieżki */
-    border-radius: 10px; /* Zaokrąglenie rogów ścieżki */
+    background: #f1f1f1;
+    border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #888; /* Kolor paska przewijania */
-    border-radius: 10px; /* Zaokrąglenie rogów paska */
+    background: #888;
+    border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Kolor paska przewijania przy najechaniu */
+    background: #555;
 }
+
+.cart-items {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse; /
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.cart-items th, .cart-items td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.cart-items th {
+    background-color: #f4f4f4;
+    color: #333;
+    font-weight: bold;
+}
+
+.cart-items tr:last-child td {
+    border-bottom: none;
+}
+
+.cart-items button {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cart-items button:hover {
+    background-color: #45a049;
+}
+
+.basket-navigation {
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+
+}
+
+.basket-navigation button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.basket-navigation button:hover {
+    background-color: #45a049;
+}
+
 
 /*<a href="https://www.flaticon.com/free-icons/cheese" title="cheese icons">Cheese icons created by Freepik - Flaticon</a>*/
 /*<a href="https://www.flaticon.com/free-icons/chef" title="chef icons">Chef icons created by Those Icons - Flaticon</a>*/

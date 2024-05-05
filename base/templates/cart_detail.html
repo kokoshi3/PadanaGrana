@@ -1,0 +1,44 @@
+<!doctype html>
+{% load static %}
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Koszyk | PadanaGrana</title>
+    <link href="{% static 'styles/singlePageTemplate.css' %}" rel="stylesheet" type="text/css">
+    <script src="{% static 'script.js' %}"></script>
+</head>
+<body>
+    <div class="container5">
+        <h1>Koszyk</h1>
+        <table class="cart-items">
+            <thead>
+                <tr>
+                    <th>Produkt</th>
+                    <th>Ilość</th>
+                    <th>Cena jednostkowa</th>
+                    <th>Całkowity koszt</th>
+                    <th>Akcje</th>
+                </tr>
+            </thead>
+            <tbody>
+                    {#Tu dodawane są elementy przez JS#}
+            </tbody>
+        </table>
+        
+        <table class="cart-items">
+            <thead>
+                <tr>
+                    <th style="text-align: right;">Łączna kwota:</th>
+                    <th id="total-price">0 zł</th>
+                </tr>
+            </thead>
+        </table>
+        <div class="basket-navigation">
+            <a href="/products"><button>Powrót do sklepu</button></a>
+            <a href="{% url 'checkout' %}"><button>Przejdź do kasy</button></a>
+        </div>
+    </div>
+</body>
+</html>

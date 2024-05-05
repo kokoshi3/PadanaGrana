@@ -1,10 +1,9 @@
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import HttpResponse
 from django.http import HttpResponse, HttpResponseRedirect
-
-from base.models import Product
+from base.models import Product, Cart, CartItem
 
 
 # Create your views here.
@@ -58,3 +57,33 @@ def product_list(request):
     print(products)
     return render(request, 'product_list.html', {'products': products})
 
+def get_cart(request):
+    cart_id = request.session.get('cart_id', None)
+    if cart_id:
+        cart, created = Cart.objects.get_or_create(id=cart_id)
+        if not created:
+            return cart
+        return Cart.objects.create()
+
+def add_to_cart(request, product_id):
+    cart = get_cart(request)
+    product = get_object_or_404(Product, id=product_id)
+    item, created = CartItem.objects.get_or_create(cart=cart, product=product)
+    if not created:
+        item.quantity += 1
+        item.save()
+    request.session['cart_id'] = cart.pk
+    return redirect('cart_detail')
+
+def cart_detail(request):
+    cart = get_cart(request)
+    return render(request, 'cart_detail.html', {'cart': cart})
+
+def remove_from_cart(request, item_id):
+    item = get_object_or_404(CartItem, id=item_id)
+    item.delete()
+    return redirect('cart_detail')
+
+def checkout(request):
+    # Logika dla widoku checkout
+    return render(request, 'checkout.html')
