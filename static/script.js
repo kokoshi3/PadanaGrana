@@ -134,8 +134,12 @@ function displayCartItems() {
 
 function removeFromCart(buttonElement, itemId) {
     var cart = JSON.parse(localStorage.getItem('cart')) || {};
-    if(cart[itemId]) {
-        delete cart[itemId];
+    if (cart[itemId]) {
+        if (cart[itemId].quantity > 1) {
+            cart[itemId].quantity -= 1;
+        } else {
+            delete cart[itemId];
+        }
         localStorage.setItem('cart', JSON.stringify(cart));
         displayCartItems();
     }

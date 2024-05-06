@@ -793,6 +793,10 @@ thead {
     text-align: left;
 }
 
+.cart-items thead {
+    width: 100%;
+}
+
 .cart-items th, .cart-items td {
     padding: 12px 15px;
     border-bottom: 1px solid #ccc;
@@ -802,6 +806,10 @@ thead {
     background-color: #f4f4f4;
     color: #333;
     font-weight: bold;
+}
+
+.cart-items tr {
+    background-color: #fff;
 }
 
 .cart-items tr:last-child td {
