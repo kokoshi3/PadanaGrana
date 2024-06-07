@@ -8,6 +8,13 @@
     <title>Koszyk | PadanaGrana</title>
     <link href="{% static 'styles/singlePageTemplate.css' %}" rel="stylesheet" type="text/css">
     <script src="{% static 'script.js' %}"></script>
+    <script>
+        function goToPayment() {
+            const totalPriceElement = document.getElementById('total-price');
+            const totalAmount = totalPriceElement.textContent.replace(' zł', '').trim();
+            window.location.href = `{% url 'process_payment' %}?amount=${totalAmount}`;
+        }
+    </script>
 </head>
 <body>
     <div class="container5">
@@ -23,7 +30,7 @@
                 </tr>
             </thead>
             <tbody>
-                    {#Tu dodawane są elementy przez JS#}
+                <!-- Tu dodawane są elementy przez JS -->
             </tbody>
         </table>
 
@@ -37,7 +44,7 @@
         </table>
         <div class="basket-navigation">
             <a href="/products"><button>Powrót do sklepu</button></a>
-            <a href="{% url 'checkout' %}"><button>Przejdź do kasy</button></a>
+            <button onclick="goToPayment()">Przejdź do kasy</button>
         </div>
     </div>
 </body>

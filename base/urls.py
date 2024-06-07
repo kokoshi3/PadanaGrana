@@ -4,6 +4,8 @@ from .views import product_list
 from django.conf import settings
 from django.conf.urls.static import static
 from .views import add_to_cart, cart_detail, remove_from_cart
+from django.urls import path
+from .views import process_payment, payment_success
 
 urlpatterns = [
     path('cart/', cart_detail, name='cart_detail'),
@@ -19,6 +21,8 @@ urlpatterns = [
     path('panelAdmina/', views.panelAdmina, name="panelAdmina"),
     path('zamow/', views.zamow, name="zamow"),
     path('rezerwacja/', views.rezerwacja, name="rezerwacja"),
+    path('pay/', process_payment, name='process_payment'),
+    path('success/<str:transaction_id>/', payment_success, name='payment_success'),
 ]
 
 if settings.DEBUG:

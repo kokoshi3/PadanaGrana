@@ -853,6 +853,78 @@ thead {
     background-color: #45a049;
 }
 
+/* Flexbox container for centering the payment form */
+.payment-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #1e1e1e;
+    color: #1e1e1e;
+    font-weight: 600;
+}
+
+.payment-container h1 {
+    color: #1e1e1e;
+}
+
+.payment-window {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 360px;  /* Fixed width */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.payment-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input-with-icon {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-with-icon input {
+    width: 85%;
+    padding: 10px 10px 10px 40px; /* Padding to make space for the icon inside the input */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.input-with-icon i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 20px;
+}
+
+.payment-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.payment-form button:hover {
+    background-color: #45a049;
+}
+
+/* Helper classes */
+.mb-20 {
+    margin-bottom: 20px;
+}
+
 
 /*<a href="https://www.flaticon.com/free-icons/cheese" title="cheese icons">Cheese icons created by Freepik - Flaticon</a>*/
 /*<a href="https://www.flaticon.com/free-icons/chef" title="chef icons">Chef icons created by Those Icons - Flaticon</a>*/

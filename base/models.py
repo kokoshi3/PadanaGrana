@@ -49,5 +49,11 @@ class CartItem(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     quantity = models.PositiveIntegerField(default=1)
 
+class Payment(models.Model):
+    amount = models.DecimalField(max_digits=10, decimal_places=2)
+    status = models.CharField(max_length=20, choices=[('pending', 'Pending'), ('completed', 'Completed'), ('failed', 'Failed')])
+    transaction_id = models.CharField(max_length=100)
+    created_at = models.DateTimeField(auto_now_add=True)
+
     def total_price(self):
         return self.quantity * self.product.price
