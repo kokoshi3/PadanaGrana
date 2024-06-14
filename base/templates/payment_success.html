@@ -1,11 +1,23 @@
 <!DOCTYPE html>
+{% load static %}
 <html>
 <head>
-    <title>Payment Successful</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Płatność pomyślna</title>
+    <link href="{% static 'styles/singlePageTemplate.css' %}" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <h1>Payment Successful</h1>
-    <p>Transaction ID: {{ payment.transaction_id }}</p>
-    <p>Amount: {{ payment.amount }}</p>
+    <div class="container6">
+        <div class="payment-window2">
+            <h1>Płatność zakończona pomyślnie</h1>
+            <p>Numer transakcji: {{ payment.transaction_id }}</p>
+            <p>Koszt: {{ payment.amount }}</p>
+            <div class="basket-navigation">
+                <a href="/"><button>Powrót</button></a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

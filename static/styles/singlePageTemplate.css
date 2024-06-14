@@ -751,6 +751,25 @@ thead {
     color: #fff;
 }
 
+.container6 {
+    height: 100vh;
+    width: 100%;
+    background-color: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Montserrat, sans-serif;
+}
+
+.container6 h1 {
+    color: #000000;
+}
+
+.container6 p {
+    font-weight: 700;
+}
+
 .cart-table {
     width: 100%;
     min-height: 90vh;
@@ -873,6 +892,14 @@ thead {
     padding: 30px;
     border-radius: 10px;
     width: 360px;  /* Fixed width */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.payment-window2 {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 570px;  /* Fixed width */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 

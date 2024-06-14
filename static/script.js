@@ -146,3 +146,15 @@ function removeFromCart(buttonElement, itemId) {
 }
 
 document.addEventListener('DOMContentLoaded', displayCartItems);
+
+function goToPayment() {
+    const totalPriceElement = document.getElementById('total-price');
+    const totalAmount = parseFloat(totalPriceElement.textContent.replace(' zł', '').trim());
+
+    if (totalAmount === 0) {
+        alert('Koszyk nie może być pusty. Dodaj produkty, aby kontynuować.');
+        return;
+    }
+
+    window.location.href = `/pay/?amount=${totalAmount}`;
+}
